@@ -1,5 +1,6 @@
 const landModel = require('../models/landModels')
 
+
 const getLanding = async (req, res) => {
 
     let minMass = req.query.minimum_mass;
@@ -12,9 +13,46 @@ const getLanding = async (req, res) => {
         }
         catch (err) {
             console.log(`Error: ${err.stack}`);
-            res.status(404).json({ "Message": "Landing not found" });
+            res.status(404).json({ "Message": "Not found" });
         }
     }
+
+
+    else if (req.query.from) {
+        try {
+            let landsFrom = await landModel.getLandsFromDate(req.query.from);
+            res.status(200).json(landsFrom);
+        }
+        catch (err) {
+            console.log(`Error: ${err.stack}`);
+            res.status(404).json({ "Message": "Not found" });
+        }
+    }
+
+
+    else if (req.query.to) {
+        try {
+            let landsTo = await landModel.getLandsToDate(req.query.to);
+            res.status(200).json(landsTo);
+        }
+        catch (err) {
+            console.log(`Error: ${err.stack}`);
+            res.status(404).json({ "Message": "Not found" });
+        }
+    }
+
+
+    else if (req.query.from && req.query.to) {
+        try {
+            let landsBetween = await landModel.getLandsBetweenDate(req.query.from, req.query.to);
+            res.status(200).json(landsBetween);
+        }
+        catch (err) {
+            console.log(`Error: ${err.stack}`);
+            res.status(404).json({ "Message": "Not found" });
+        }
+    }
+
 
     else {
         try {
