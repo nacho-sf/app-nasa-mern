@@ -4,7 +4,6 @@ const getLanding = async (req, res) => {
 
     try {
         const landings = await landModel.getAllLandings();
-        console.log(landings);
         res.status(200).json(landings);
     }
     catch (error) {

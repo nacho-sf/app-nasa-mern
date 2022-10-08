@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('../utils/dbMongo');
 
 const objectSchema = new mongoose.Schema ({
 
@@ -39,8 +39,8 @@ const objectSchema = new mongoose.Schema ({
         }
     }
     
-})
+});
 
-const landSchema = mongoose.model('landings', objectSchema);
+const landModel = mongoose.model('landings', objectSchema);
 
-module.exports = landSchema;
+module.exports = landModel;
