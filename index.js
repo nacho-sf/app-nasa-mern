@@ -1,13 +1,15 @@
 const express = require('express');
+const cors = require("cors");
 
-const landRouter = require('./routes/landRoutes')
-const userRouter = require('./routes/userRoutes')
+const landRouter = require('./routes/landRoutes');
+const userRouter = require('./routes/userRoutes');
 
-const manage404 = require('./middlewares/error404')
+const manage404 = require('./middlewares/error404');
 
 const app = express();
 const port = 3000;
 
+app.use(cors());
 app.use(express.json());
 
 app.use("/api/astronomy/landings", landRouter);
