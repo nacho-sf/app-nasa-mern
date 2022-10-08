@@ -4,7 +4,7 @@ const cors = require("cors");
 require('./utils/dbMongo');
 
 const landRouter = require('./routes/landRoutes');
-const userRouter = require('./routes/userRoutes');
+//const userRouter = require('./routes/userRoutes');
 
 const manage404 = require('./middlewares/error404');
 
@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/astronomy/landings", landRouter);
-app.use("/api/users", userRouter);
+//app.use("/api/users", userRouter);
 
 app.use(manage404);
 
