@@ -59,10 +59,41 @@ const getLanding = async (req, res) => {
             const landings = await landModel.getAllLandings();
             res.status(200).json(landings);
         }
-        catch (error) {
-            console.log(`Error: ${error.stack}`);
-            res.status(404).json({"Message": "Landings not found"});
+        catch (err) {
+            console.log(`Error: ${err.stack}`);
+            res.status(404).json({"Message": "Not found"});
         }
+    }
+}
+
+
+
+const getLandingByMass = async(req, res) => {
+
+    let massParam = req.params.mass;
+    let mass = parseInt(massParam)
+
+    try{
+     let landMass =  await landModel.getLandingByMass(mass);
+    res.status(200).json(landMass)   
+    }
+    catch (err) {
+    console.log(`Error: ${err.stack}`)
+    res.status(404).json({ "Message": "Not found" });  
+    }
+}
+
+
+
+const getLandingByClass = async(req, res) => {
+
+    try{
+     let landClass =  await landModel.getLandingByClass(req.params.class);
+    res.status(200).json(landClass);   
+    }
+    catch (err) {
+    console.log(`Error: ${err.stack}`)
+    res.status(404).json({ "Message": "Not found" });  
     }
 }
 
@@ -70,8 +101,8 @@ const getLanding = async (req, res) => {
 
 const landControllers = {
     getLanding,
-    //getLandingByMass,
-    //getLandingByClass,
+    getLandingByMass,
+    getLandingByClass,
     //createLanding, 
     //updateLanding,
     //deleteLanding

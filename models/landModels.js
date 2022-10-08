@@ -60,11 +60,39 @@ const getAllLandings = async () => {
 };
 
 
+const getLandingByMass = async (mass) => {
+    try {
+        const getLandingByMass = await landSchema.find({mass: mass}, "-_id");
+        console.log(typeof mass);
+        console.log(mass);
+        return getLandingByMass;
+    }
+    catch(err){
+    console.error(err);
+    }
+};
+
+
+const getLandingByClass = async (clase) => {
+    try {
+        const getLandingByClass = await landSchema.find({recclass: clase}, "-_id");
+        return getLandingByClass;
+    }
+    catch(err){
+    console.error(err);
+    }
+};
+
+
+
+
 const landModels = {
     getLandsByMinMass,
     getLandsFromDate,
     getLandsToDate,
     getLandsBetweenDate,
+    getLandingByMass,
+    getLandingByClass,
     getAllLandings
 }
 
