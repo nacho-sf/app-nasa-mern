@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from 'react'
 
-class Neas extends Component {
-  render() {
-    return <div>Neas</div>;
-  }
+function Neas() {
+  return (
+    <div>Neas</div>
+  )
 }
 
-export default Neas;
+export default Neas
