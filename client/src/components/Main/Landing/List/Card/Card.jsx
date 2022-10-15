@@ -11,6 +11,7 @@ function Card(props) {
       <p>{landing.recclass}</p>
       <p>{landing.mass}</p>
       
+      
     </div>
   )
 }

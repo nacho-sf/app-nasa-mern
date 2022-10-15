@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../List/Card';
+import Create from '../List/Create';
 
 
 function List() {
@@ -19,7 +20,7 @@ function List() {
 
   return (
     <div className='list'>
-
+{<Create/>}
 {landings.map(landing => (<Card 
           value={landing}
           key={crypto.randomUUID()} 
