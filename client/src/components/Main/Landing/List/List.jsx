@@ -2,7 +2,9 @@ import React from 'react'
 
 function List() {
   return (
-    <div className='list'>Hola List</div>
+    <div className='list'>
+      
+    </div>
   )
 }
 
