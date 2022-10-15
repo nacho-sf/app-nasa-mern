@@ -1,41 +1,52 @@
-const mongoose = require('../utils/dbMongo');
+const mongoose = require('mongoose');
 
 const objectSchema = new mongoose.Schema ({
 
     name: {
         type: String,
+        required: true
     },
     id: {
-        type: Number,
+        type: String,
+        required: true,
         unique: true
     },
     nametype: {
         type: String,
+        required: true
     },
     recclass: {
         type: String,
+        required: true
     },
     mass: {
         type: Number,
+        required: true
     },
     fall: {
         type: String,
+        required: true
     },
     year: {
-        type: String,
+        type: Date,
+        required: true
     },
     reclat: {
         type: Number,
+        required: true
     },
     reclong:{
         type: Number,
+        required: true
     },
     geolocation: {
         latitude: {
             type: Number,
+            required: true
         },
         longitude:{
             type: Number,
+            required: true
         }
     }
     
