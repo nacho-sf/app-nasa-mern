@@ -1,0 +1,9 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.landing {
+    @include column-centered-content;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
