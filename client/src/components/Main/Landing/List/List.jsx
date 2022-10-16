@@ -2,23 +2,11 @@ import React, { useEffect, useState } from 'react';
 import Card from '../List/Card';
 import Create from '../List/Create';
 import Delete from '../List/Delete';
-
+import useFetch from '../../../../hooks/useFetch';
 
 function List() {
 
-  const [landings, setLandings] = useState([]);
-  //const [id, setId] = useState("");
-
-
-  useEffect(() => {
-    const getLandings = async () => {
-      const resp = await fetch("http://localhost:3000/api/astronomy/landings");
-      const data = await resp.json();
-      setLandings(data);
-    }
-    getLandings();
-  }, [landings]);
-
+  const { loading, result } = useFetch('http://localhost:3000/api/astronomy/landings');
 
 
   return (
@@ -35,7 +23,7 @@ function List() {
       </section>
 
       <section className='list-card'>
-        {landings.map(landing => (
+        {loading?<h3>Cargando Landings...</h3>:result.map(landing => (
           <Card 
             value={landing}
             key={crypto.randomUUID()} 

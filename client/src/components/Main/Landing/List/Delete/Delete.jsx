@@ -24,7 +24,7 @@ function Delete(props) {
 
   return (
     <div className='delete'>
-      <h3>Borrar landing</h3>
+      <h3>Borrar Landing</h3>
       <form onSubmit={handleSubmit(deleteLanding)}>
         <input name="id" {...register("id")} placeholder="Id..." />
         <button type="submit">Borrar</button>

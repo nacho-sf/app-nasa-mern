@@ -32,7 +32,7 @@ function Create(props) {
 
   return (
     <div className='create'>
-      <h3>Crear landing</h3>
+      <h3>Crear Landing</h3>
       <form onSubmit={handleSubmit(createLanding)}>
         <input name="name" {...register("name")} placeholder="Nombre..." />
         <input name="id" {...register("id")} placeholder="Id..." />

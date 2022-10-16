@@ -6,9 +6,9 @@ function Nav() {
     <div className='nav'>
       <Link  to="/">Home</Link>
       <div className='space1'></div>
-      <Link to="/landing">Landings</Link>
+      <Link to="/landing">Geolocalización</Link>
       <div className='space2'></div>
-      <Link to="/landing/list">List</Link>
+      <Link to="/landing/list">Base de datos</Link>
     </div>
   )
 }

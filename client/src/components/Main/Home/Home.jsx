@@ -10,16 +10,6 @@ function Home() {
       <p>hsinwiswpsw</p><br/>
       <p>hsinwiswpsw</p><br/>
       <p>hsinwiswpsw</p><br/>
-      <p>hsinwiswpsw</p><br/>
-      <p>hsinwiswpsw</p><br/>
-      <p>hsinwiswpsw</p><br/>
-      <p>hsinwiswpsw</p><br/>
-      <p>hsinwiswpsw</p><br/>
-      <p>hsinwiswpsw</p><br/>
-      <p>hsinwiswpsw</p><br/>
-      <p>hsinwiswpsw</p><br/>
-      <p>hsinwiswpsw</p><br/>
-      
       </div>
     
   )
