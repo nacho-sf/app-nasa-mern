@@ -8,7 +8,6 @@ function Create(props) {
   const { register, handleSubmit } = useForm();
 
   const createLanding = async (landing) => {
-
     try {
       const landFields = {
         name: landing.name,
@@ -33,6 +32,7 @@ function Create(props) {
 
   return (
     <div className='create'>
+      <h3>Crear landing</h3>
       <form onSubmit={handleSubmit(createLanding)}>
         <input name="name" {...register("name")} placeholder="Nombre..." />
         <input name="id" {...register("id")} placeholder="Id..." />

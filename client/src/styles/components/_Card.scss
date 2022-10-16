@@ -2,5 +2,128 @@
 @import '../utils/mixins.scss';
 
 .card {
+    background-color: $color-gray;
+    border-radius: 10px;
+    height: 70px;
+    width:150px;
+    margin:5px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: width 0.5s, height 0.5s;
+
+    .info {
+        display: none;
+        flex-flow: column nowrap;
+        justify-content: left;
+        transition: display 0.5s;
+    }
+
+    .name {
+        color:$color-primary-alt-light;
+        font-family: $title-helv;
+        font-size: large;
+        font-weight: 700;
+        margin: 5px;
+    }
+
+
+    .info:hover{
+        display:flex;
+        flex-flow:column nowrap;
+        transition: display 0.5s;
+    }
+
+}
+
+
+.card:hover {
+    height: auto;
+    width: 150px;
+
+    .info {
+        margin:10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-flow: column nowrap;
+        text-align: left;
+    }
+
+    .name {
+        color:$color-primary-alt-light;
+        font-family: $title-helv;
+        font-size: large;
+        font-weight: 700;
+        margin: 5px;
+        margin-top: 20px;
+    }
+
+    .id {
+        color: white;
+        font-family: $body-sans;
+        font-size: medium;
+        font-weight: 400;
+        margin: 5px;
+    }
+
+    .nametype {
+        color: white;
+        font-family: $body-sans;
+        font-size: medium;
+        font-weight: 400;
+        margin: 5px;
+    }
+
+    .recclass {
+        color: white;
+        font-family: $body-sans;
+        font-size: medium;
+        font-weight: 400;
+        margin: 5px;
+    }
+
+    .mass {
+        color: white;
+        font-family: $body-sans;
+        font-size: medium;
+        font-weight: 400;
+        margin: 5px;
+    }
+
+    .fall {
+        color: white;
+        font-family: $body-sans;
+        font-size: medium;
+        font-weight: 400;
+        margin: 5px;
+    }
+
+    .year {
+        color: white;
+        font-family: $body-sans;
+        font-size: medium;
+        font-weight: 400;
+        margin: 5px;
+    }
+
+    .reclat {
+        color: white;
+        font-family: $body-sans;
+        font-size: medium;
+        font-weight: 400;
+        margin: 5px;
+    }
+
+    .reclong {
+        color: white;
+        font-family: $body-sans;
+        font-size: medium;
+        font-weight: 400;
+        margin: 5px;
+    }
+
 
 }

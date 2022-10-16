@@ -3,4 +3,44 @@
 
 .list {
     margin-top:80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.forms-container-empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 480px;
+    width: 300px;
+}
+
+.forms-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 480px;
+}
+
+.list-create {
+    background-color: $color-gray;
+    margin: 15px;
+    margin-top:0;
+    border-radius: 10px;
+}
+
+.list-delete {
+    background-color: $color-gray;
+    margin: 15px;
+    margin-top:0;
+    border-radius: 10px;
+}
+
+.list-card {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 100%;
 }

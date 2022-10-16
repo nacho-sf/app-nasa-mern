@@ -1,0 +1,22 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.create {
+    &>h3 {
+        font-family: $title-helv;
+        color:$color-primary-alt-light;
+        margin: 0;
+        margin-top:10px;
+        margin-bottom: 5px;
+    }
+    &>form {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        padding-top: 0;
+        &>input, select, button {
+            margin:5px;
+            font-size:0.8rem;
+        }
+    }
+}
