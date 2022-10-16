@@ -29,11 +29,13 @@ function Map() {
       {landings.map(landing => (
         <Marker 
           key={uuidv4()} 
-          position={[landing.geolocation.latitude, landing.geolocation.longitude]} 
+          position={[landing.reclat, landing.reclong]} 
           icon={icon}
         >
             <Popup>
               <p>{landing.name}</p>
+              <p>{landing.reclat}</p>
+              <p>{landing.reclong}</p>
             </Popup>
         </Marker>
       ))}
