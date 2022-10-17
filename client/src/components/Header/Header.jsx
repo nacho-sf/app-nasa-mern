@@ -6,7 +6,7 @@ function Header() {
     <div className='header'>
       <div className='container-title'>
         <div className='logo-header'></div>
-        <div className='title-header'>Landings Search</div>
+        <div className='title-header'>Meteorite Landings Search</div>
       </div>
       <Nav />
     </div>

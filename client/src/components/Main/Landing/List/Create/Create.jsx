@@ -35,16 +35,16 @@ function Create(props) {
       <h3>Crear Landing</h3>
       <form onSubmit={handleSubmit(createLanding)}>
         <input name="name" {...register("name")} placeholder="Nombre..." />
-        <input name="id" {...register("id")} placeholder="Id..." />
-        <select {...register("nametype")} placeholder="¿Tipo válido?"><option value="Valid">Tipo válido</option></select>
+        <input name="id" {...register("id")} placeholder="Id único..." />
+        <select {...register("nametype")}><option value="Valid">Valid</option><option value="Relict">Relict</option></select>
         <input name="recclass" {...register("recclass")} placeholder="Clase..." />
         <input name="mass" {...register("mass")} placeholder="Masa..." />
-        <select {...register("fall")} placeholder="¿Cayó?"><option value="Fell">¿Cayó?</option></select>
+        <select {...register("fall")}><option value="Fell">Fell</option><option value="Found">Found</option></select>
         <input name="year" {...register("year")} placeholder="Año..." />
         <input name="reclat" {...register("reclat")} placeholder="Latitud..." />
         <input name="reclong" {...register("reclong")} placeholder="Longitud..." />
         
-        <button type="submit">Enviar</button>
+        <button type="submit">Crear</button>
       </form>
     </div>
   )

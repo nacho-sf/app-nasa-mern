@@ -33,9 +33,12 @@ function Map() {
           icon={icon}
         >
             <Popup>
-              <p>{landing.name}</p>
-              <p>{landing.reclat}</p>
-              <p>{landing.reclong}</p>
+              <h3>{landing.name}</h3>
+              <p>Id: {landing.id}</p>
+              <p>Clase: {landing.recclass}</p>
+              <p>Masa: {landing.mass}</p>
+              <p>Lat: {landing.reclat}</p>
+              <p>Lon: {landing.reclong}</p>
             </Popup>
         </Marker>
       ))}

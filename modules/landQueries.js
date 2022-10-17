@@ -10,6 +10,8 @@ const getLandsByMinMass = async (minimum_mass) => {
                     '_id': 0,
                     'name': 1,
                     'mass': 1,
+                    'reclat': 1,
+                    'reclong': 1,
                     'geolocation':1
                 }
             },
@@ -45,6 +47,8 @@ const getLandsFromDate = async (from) => {
                     'name': 1,
                     'mass': 1,
                     'date': 1,
+                    'reclat': 1,
+                    'reclong': 1,
                     'geolocation':1,
                 }
             },
@@ -84,6 +88,8 @@ const getLandsToDate = async (to) => {
                     'name': 1,
                     'mass': 1,
                     'date': 1,
+                    'reclat': 1,
+                    'reclong': 1,
                     'geolocation':1,
                 }
             },
@@ -128,6 +134,8 @@ const getLandsBetweenDate = async (from, to) => {
                     'name': 1,
                     'mass': 1,
                     'date': 1,
+                    'reclat': 1,
+                    'reclong': 1,
                     'geolocation':1,
                 }
             },
@@ -160,6 +168,8 @@ const getAllLands = async () => {
                     'name': 1,
                     'mass': 1,
                     'recclass': 1,
+                    'reclat': 1,
+                    'reclong': 1,
                     'geolocation':1
                 }
             },
